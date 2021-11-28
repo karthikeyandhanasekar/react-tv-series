@@ -6,18 +6,25 @@
 }
 
 :root {
-    --bgcolor: #ff0055;
+    --bgcolor: #ff005579;
+}
+
+
+header,
+aside,
+section {
+    background: rgb(34, 138, 195);
+    background: linear-gradient(173deg, rgba(34, 138, 195, 1) 5%, rgba(127, 45, 253, 1) 100%);
 }
 
 aside {
-    background-color: var(--bgcolor);
-    height          : 91vh;
-    width           : fit-content;
-    display         : flex;
-    flex-direction  : column;
-    padding         : 2%;
-    font-size       : 1.5em;
-    float           : left;
+    height        : 91vh;
+    width         : fit-content;
+    display       : flex;
+    flex-direction: column;
+    padding       : 2%;
+    font-size     : 1.5em;
+    float         : left;
 }
 
 aside ul {
@@ -25,10 +32,17 @@ aside ul {
     flex-direction : column;
     justify-content: space-between;
 }
-aside ul :target
-{
+
+aside ul :target {
     background-color: white;
-    color: black;
+    color           : black;
+}
+
+ul h4 {
+    margin-top   : 10%;
+    color        : white;
+    font-size    : 1.2em;
+    margin-bottom: 10%;
 }
 
 aside ul li {
@@ -38,11 +52,16 @@ aside ul li {
 
 }
 
+ul {
+    border-bottom: groove;
+}
+
 .link {
     text-decoration: none;
     border         : none;
     color          : white;
 }
+
 
 header {
     background-color: var(--bgcolor);
@@ -84,55 +103,131 @@ section {
     padding-top          : 2%;
     overflow             : auto;
     gap                  : 4%;
-}
-
-section div{
-    height    : 100%;
-    padding   : 1%;
-    font-size: 1.3em;
-    cursor: pointer;
-
 
 }
-section div:hover
-{
-    border: groove var(--bgcolor);
+
+section div {
+    height             : 30vh;
+    padding            : 1%;
+    font-size          : 1.2em;
+    cursor             : pointer;
+    color              : white;
+    animation          : fadein 1s linear .5s;
+    animation-fill-mode: backwards;
+    background-size    : cover;
+    background-repeat  : no-repeat;
+}
+
+
+@keyframes fadein {
+    0% {
+        opacity: .5;
+    }
+
+    50% {
+        opacity: .7;
+    }
+
+    100% {
+        opacity: 1;
+    }
+
+}
+
+section div:hover {
+    border    : groove var(--bgcolor);
+    transform : scale(1.2);
+    transition: transform 500ms ease-in-out;
 }
 
 section div h4 {
+    margin-top    : 65%;
     text-align    : center;
     letter-spacing: 1px;
 
 }
 
-section div img {
-    width        : 100%;
-    padding-left : 5%;
-    padding-right: 5%;
-    height       : 70%;
-}
+
 
 ::-webkit-scrollbar {
     display: none;
 }
 
 
-::placeholder
-{
+::placeholder {
     color: white;
 }
 
-.likeview {
-    display: flex;
-    height    : fit-content;
-    font-size : .7em;
-    border    : none;
-    box-shadow: none;
-    justify-content: space-around;
 
+.likeview:hover {
+    border: none;
+}
+
+.suggestion {
+    color: black;
+
+    background     : white;
+    width          : 25%;
+    margin-top     : 1%;
+    overflow-y     : auto;
+    position       : absolute;
+    padding        : 1% 0 1% 0;
+    z-index        : 1;
+    text-decoration: none;
+}
+
+
+.suggestion div {
+    display       : flex;
+    align-items   : center;
+    border-bottom : groove;
+    padding-bottom: 4%;
+    cursor        : pointer;
+}
+
+.suggestion div:hover {
+    background: grey;
+}
+
+.suggestion div img {
+    width       : 40%;
+    margin-right: 5%;
+    ;
+}
+
+.hide {
+    display: none;
+}
+
+.movie {
+    animation: none;
+}
+
+.movie div:hover {
+    transform : none;
+    border    : none;
+    transition: none
+}
+
+.movie img {
+    height: 50vh;
+    width : 50vh;
 
 }
-.likeview:hover
-{
-    border: none;
+
+.movie div {
+    width     : 100vh;
+    padding   : 1%;
+    text-align: justify;
+    font-size : 2em;
+}
+
+.movie div h1 {
+    margin-bottom: 5%;
+}
+
+.movie div p {
+    margin-bottom : 5%;
+    line-height   : 1.6;
+    letter-spacing: 1;
 }

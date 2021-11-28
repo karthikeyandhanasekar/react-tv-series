@@ -1,16 +1,13 @@
+import { useNavigate } from "react-router"
 
 
 
-const Content = ({ key,imgpath,title,count,average }) => {
+const Content = ({ id, imgpath, title }) => {
+    const naviagte = useNavigate()
 
     return (
-        <div key={key} className="movie" >
-            <img src={imgpath} alt={title} ></img>
+        <div key={id} className="movie" onClick={() => naviagte(`../moviedetail/${id}`)} style={{ backgroundImage: `url(${imgpath})` }} >
             <h4>{title}</h4>
-            <div className="likeview">
-                <span class="like">❤ {average}</span>
-                <span class="views">👁 {count}</span>
-            </div>
         </div>
 
     )

@@ -3,8 +3,8 @@ import Aside from "./aside"
 import Content from "./content"
 import Header from "./Header"
 
-const Popular = ({ data }) => {
-    document.title = "Popular"
+const Upcomming = ({ data }) => {
+    document.title = "Upcomming"
 
     const ui = data.map(ele => {
         if (ele.backdrop_path || ele.title)
@@ -25,4 +25,4 @@ const Popular = ({ data }) => {
 
 }
 
-export default Popular
+export default Upcomming

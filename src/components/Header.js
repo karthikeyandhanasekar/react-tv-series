@@ -1,13 +1,12 @@
 import Input from "./inputfield"
 
-const applntitle = "Tv-Relax"
+
+
+const applntitle = "MTV-Relax"
+
 document.title = applntitle
 
 const Header = () => {
-
-    const handletextfield = (event) => {
-        console.log(event.target.value);
-    }
 
 
     return (
@@ -16,9 +15,9 @@ const Header = () => {
                 <h1>{applntitle}</h1>
             </div>
             <div>
-                <Input type="search" placeholder="Game of thrones" onchange={handletextfield} />
+                <Input type="search" placeholder="Game of thrones" />
             </div>
-            
+
         </header>
     )
 }

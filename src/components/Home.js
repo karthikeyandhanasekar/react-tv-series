@@ -4,15 +4,15 @@ import Content from "./content"
 import Header from "./Header"
 
 const Home = ({ data }) => {
-    document.title="Home"
+    document.title = "Home"
     const ui = data.map(ele => {
         if (ele.backdrop_path)
-            return <Content key={ele.id} imgpath={`https://image.tmdb.org/t/p/w500${ele.backdrop_path}`} title={ele.name}
+            return <Content id={ele.id} imgpath={`https://image.tmdb.org/t/p/w200${ele.poster_path}`} title={ele.title ? ele.title : ele.name}
                 count={ele.vote_count} average={ele.vote_average}
             />
     }
     )
-    
+
     return (
         <Fragment>
             <Header />
@@ -20,8 +20,6 @@ const Home = ({ data }) => {
             <section>
                 {ui}
             </section>
-
-
         </Fragment>
     )
 
