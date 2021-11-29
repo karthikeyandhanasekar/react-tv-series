@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/react-tv-series/static/css/main.44f6e3bf.chunk.css",
+    "main.js": "/react-tv-series/static/js/main.96daee22.chunk.js",
+    "main.js.map": "/react-tv-series/static/js/main.96daee22.chunk.js.map",
+    "runtime-main.js": "/react-tv-series/static/js/runtime-main.f66f4d3e.js",
+    "runtime-main.js.map": "/react-tv-series/static/js/runtime-main.f66f4d3e.js.map",
+    "static/js/2.5dccc922.chunk.js": "/react-tv-series/static/js/2.5dccc922.chunk.js",
+    "static/js/2.5dccc922.chunk.js.map": "/react-tv-series/static/js/2.5dccc922.chunk.js.map",
+    "index.html": "/react-tv-series/index.html",
+    "static/css/main.44f6e3bf.chunk.css.map": "/react-tv-series/static/css/main.44f6e3bf.chunk.css.map",
+    "static/js/2.5dccc922.chunk.js.LICENSE.txt": "/react-tv-series/static/js/2.5dccc922.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.f66f4d3e.js",
+    "static/js/2.5dccc922.chunk.js",
+    "static/css/main.44f6e3bf.chunk.css",
+    "static/js/main.96daee22.chunk.js"
+  ]
+}
