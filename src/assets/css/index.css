@@ -9,6 +9,9 @@
     --bgcolor: #ff005579;
 }
 
+::-webkit-scrollbar {
+    display: none;
+}
 
 header,
 aside,
@@ -97,7 +100,7 @@ header div input {
 section {
     height               : 91vh;
     display              : grid;
-    grid-template-columns: repeat(4, minmax(auto, 25%));
+    grid-template-columns: repeat(5, minmax(auto, 20%));
     padding-left         : 2%;
     padding-right        : 2%;
     padding-top          : 2%;
@@ -107,14 +110,14 @@ section {
 }
 
 section div {
-    height             : 30vh;
+    width              : 100%;
+    height             : 40vh;
     padding            : 1%;
     font-size          : 1.2em;
     cursor             : pointer;
-    color              : white;
     animation          : fadein 1s linear .5s;
     animation-fill-mode: backwards;
-    background-size    : cover;
+    background-size    : auto;
     background-repeat  : no-repeat;
 }
 
@@ -135,7 +138,6 @@ section div {
 }
 
 section div:hover {
-    border    : groove var(--bgcolor);
     transform : scale(1.2);
     transition: transform 500ms ease-in-out;
 }
@@ -147,20 +149,8 @@ section div h4 {
 
 }
 
-
-
-::-webkit-scrollbar {
-    display: none;
-}
-
-
 ::placeholder {
     color: white;
-}
-
-
-.likeview:hover {
-    border: none;
 }
 
 .suggestion {
@@ -192,7 +182,6 @@ section div h4 {
 .suggestion div img {
     width       : 40%;
     margin-right: 5%;
-    ;
 }
 
 .hide {
@@ -200,34 +189,76 @@ section div h4 {
 }
 
 .movie {
-    animation: none;
+    animation     : none;
+    display       : flex;
+    flex-direction: column;
+
+}
+
+.movie>div {
+    height: fit-content
 }
 
 .movie div:hover {
     transform : none;
-    border    : none;
     transition: none
 }
 
 .movie img {
     height: 50vh;
     width : 50vh;
+    cursor: pointer;
 
 }
 
-.movie div {
-    width     : 100vh;
-    padding   : 1%;
-    text-align: justify;
-    font-size : 2em;
+
+
+.detail {
+    display    : flex;
+    text-align : justify;
+    line-height: 1.6;
+    font-size  : 1.4em;
+    height     : inherit;
 }
 
-.movie div h1 {
-    margin-bottom: 5%;
+.detail div {
+    margin-left: 1%;
+    height     : inherit;
+
 }
 
-.movie div p {
-    margin-bottom : 5%;
-    line-height   : 1.6;
-    letter-spacing: 1;
+.detail div h1,
+.detail div p {
+    margin-bottom: 1%;
+}
+
+
+.collection {
+    display: flex;
+    padding: 2%;
+    height : auto;
+}
+
+.collection div {
+    margin-left    : 2%;
+    display        : flex;
+    align-items    : center;
+    justify-content: center;
+    text-align     : justify;
+    width          : 20%;
+    overflow-x     : auto;
+    background-size: auto;
+}
+
+.similar {
+    display              : grid;
+    grid-template-columns: repeat(5, minmax(auto, 18%));
+    gap                  : 2%;
+    height               : fit-content;
+
+
+}
+
+.similar div {
+    width: 100%;
 }

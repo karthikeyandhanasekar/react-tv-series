@@ -4,7 +4,7 @@ import './assets/css/index.css'
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/">
       <div className="App">
         <MainComponents />
 

@@ -142,14 +142,16 @@ const MainComponents = () => {
     }, [])
 
     return (
-        <Routes>
+        <Routes >
             <Route exact path="/" element={<Home data={search.get('type') === 'movie' ? moviedata : tvdata} />} />
+
+            <Route  path="/react-tv-series" element={<Home data={search.get('type') === 'movie' ? moviedata : tvdata} />} />
 
             <Route path="/home" element={<Home data={search.get('type') === 'movie' ? moviedata : tvdata} />} />
             <Route path="/popular" element={<Popular data={search.get('type') === 'movie' ? popularmovie : populartv} />} />
             <Route path="/upcomming" element={<Upcomming data={upcommingmovie} />} />
             <Route path="/toprated" element={<TopRated data={search.get('type') === 'movie' ? topratedmovie : topratedtv} />} />
-            <Route path="/moviedetail/:id" element={<Movie />} />
+            <Route path="/moviedetail/:name/:id" element={<Movie />} />
 
         </Routes>
 

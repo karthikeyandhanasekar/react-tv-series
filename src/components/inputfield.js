@@ -40,10 +40,13 @@ const Input = ({ type, name, placeholder, onchange }) => {
             <div className="suggestion" style={{ height: (movielist.length * document.querySelector(".suggestion div")?.offsetHeight) }} >
                 {moviename !== '' ?
                     movielist.map(ele =>
-                        <div key={ele.id} onClick={() => naviagte(`../moviedetail/${ele.id}`)} >
+                        {
+                            if(ele.backdrop_path)
+                        return <div key={ele.id} onClick={() => naviagte(`../moviedetail/${ele.name ? ele.name : ele.title}/${ele.id}`)} >
                             <img src={`https://image.tmdb.org/t/p/w500${ele.backdrop_path}`} alt={ele.name ? ele.name : ele.title} />
                             <h2>{ele.name ? ele.name : ele.title}</h2></div>
-                    )
+
+                        })
                     : document.querySelector(".suggestion")?.classList.toggle("hide")
                 }
             </div>
